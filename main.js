@@ -5,7 +5,7 @@ function convert (usd) {
     const convert = usd * value;
     return `at course 8--> ${usd} usd= ${convert} uah`;
 }
-console.log (convert (25) );
+
 
 //Task#2
 function reverse(str) {
@@ -13,7 +13,7 @@ function reverse(str) {
     const result = str.split(``).reverse().join(``);
     return `Rezult: ${result}`;
 }
-console.log (reverse ( "Pasha" ) );
+
 
 //Task#3
 function printStairs(n) {
@@ -35,8 +35,7 @@ function printStairs(n) {
     }
         return sumRange;
  }
- console.log ('rezult:' + sumRange (2, 4) );
- console.log ('rezult:' + sumRange (-1, 3) );
+
  //task#5
  function min(a, b, c) {
 
@@ -48,7 +47,7 @@ function printStairs(n) {
        } else {}
     } 
 
-    return console.log (min);
+    return min;
 }      
  min(10, 5, 11);
  min(3, 8, 4);
@@ -75,7 +74,8 @@ function firstAndLastToUpper(str){
     let Rezult = str[0].toUpperCase() + str.slice(1,a)+str[a].toUpperCase();
     console.log (Rezult);
 }
-firstAndLastToUpper(`abc`);
+
+
 //task#8
 function cursorCheck(str) {
     
@@ -93,8 +93,8 @@ function cursorCheck(str) {
       }
     }
 }
-console.log ( cursorCheck( "Hello I am OstaP" ) );
-console.log ( cursorCheck( "Superman is here" ) );
+
+
 //task9
 function toUpperCase(str) {
 
@@ -113,23 +113,28 @@ function toUpperCase(str) {
             return toUpperChar;
         }
     }
-    console.log (toUpperChar);
 }
 toUpperCase('abc');
 //task10
 function removeDuplicationLetters(str){
 
-        let noDublicate = '';
+        let noDublicate = ' ';
+
         for (let i = 0; i < str.length; i++){
 
-            if ( (noDublicate.toUpperCase().indexOf(str[i] ) == -1)&&
-                (noDublicate.toLowerCase().indexOf(str[i]) == -1) ) {
+           if (str[i] == ' '){
+               
+            noDublicate += str[i];
+           }
+           else if  (noDublicate.toUpperCase().indexOf(str[i]) == -1 &&
+              noDublicate.toLowerCase().indexOf(str[i]) == -1) { 
 
-                noDublicate += str[i].trim();
+                  noDublicate += str[i];
             }   
         }
             return noDublicate;
     }
+
 //#task11
 function fibonacci(n){
 
@@ -142,7 +147,6 @@ function fibonacci(n){
             b = c;
         }
 
-    console.log (n + " " + "position among Fibonacci numbers--> "+" " + b);
     return `${n} position among Fibonacci numbers--> ${b}`;
 }
 fibonacci(3);
