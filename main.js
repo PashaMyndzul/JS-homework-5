@@ -116,25 +116,18 @@ function toUpperCase(str) {
 }
 toUpperCase('abc');
 //task10
-function removeDuplicationLetters(str){
-
-        let noDublicate = ' ';
-
-        for (let i = 0; i < str.length; i++){
-
-           if (str[i] == ' '){
-               
-            noDublicate += str[i];
-           }
-           else if  (noDublicate.toUpperCase().indexOf(str[i]) == -1 &&
-              noDublicate.toLowerCase().indexOf(str[i]) == -1) { 
-
-                  noDublicate += str[i];
-            }   
-        }
-            return noDublicate;
+function removeDuplicationLetters(str) {
+    let noDublicate = ' ';
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] == ' ') {
+        noDublicate += str[i];
+      } else if (noDublicate.toUpperCase().indexOf(str[i]) == -1 &&
+                 noDublicate.toLowerCase().indexOf(str[i]) == -1) { 
+        noDublicate += str[i];
+      }   
     }
-
+    return noDublicate;
+}
 //#task11
 function fibonacci(n){
 
